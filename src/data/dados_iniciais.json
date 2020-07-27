@@ -1,0 +1,95 @@
+{
+  "categorias": [
+    {
+      "titulo": "Educação Financeira",
+      "link": "",
+      "cor": "#6BD1FF",
+      "link_extra": {
+        "text": "O necessário para você começar a poupar dinheiro",
+        "url": ""
+      },
+      "videos": [
+        {
+          "titulo": "Dicas para poupar dinheiro",
+          "url": "https://www.youtube.com/watch?v=Lb-dn0C5PXg"
+        },
+        {
+          "titulo": "Entendendo a inflação",
+          "url": "https://www.youtube.com/watch?v=3An8pcxOa_o"
+        },
+        {
+          "titulo": "Juros",
+          "url": "https://www.youtube.com/watch?v=t0tZMCCKOYI"
+        }
+      ]
+    },
+    {
+      "titulo": "Ações",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Tudo o que você precisa saber sobre ações",
+        "url": ""
+      },
+      "videos": [
+        {
+          "titulo": "O que são dividendos?",
+          "url": "https://www.youtube.com/watch?v=ypz4zO0sWZ4"
+        },
+        {
+          "titulo": "Buy and Hold",
+          "url": "https://www.youtube.com/watch?v=wuOOFJvII5s"
+        },
+        {
+          "titulo": "Como Analisar Uma Empresa",
+          "url": "https://www.youtube.com/watch?v=KpwtM2QfBU0"
+        },
+        {
+          "titulo": "Preço de compra importa?",
+          "url": "https://www.youtube.com/watch?v=QjHiQK4vKas"
+        }
+      ]
+    },
+    {
+      "titulo": "Fundos Imobiliários",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "Tudo sobre fundos imobiliários ",
+        "url": ""
+      },
+      "videos": [
+        {
+          "titulo": "Fundos Imobiliários",
+          "url": "https://www.youtube.com/watch?v=6FIDL196-uc"
+        }
+      ]
+    },
+    {
+      "titulo": "Renda Fixa",
+      "cor": "orange",
+      "link_extra": {
+        "text": "Tudo sobre os investimentos em renda fixa",
+        "url": "/"
+      },
+      "videos": [
+        {
+          "titulo": "Tipos de renda fixa",
+          "url": "https://www.youtube.com/watch?v=zcyDGzo4N-s"
+        }
+      ]
+    },
+    {
+      "titulo": "Stocks",
+      "cor": "red",
+      "link_extra": {
+        "text": "Como comprar ações nos EUA",
+        "url": "/"
+      },
+      "videos": [
+        {
+          "titulo": "Como investir nos EUA?",
+          "url": "https://www.youtube.com/watch?v=MjdB8fPJYJ8"
+        }
+      ]
+    }
+  ]
+}
