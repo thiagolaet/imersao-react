@@ -1,4 +1,4 @@
-## You can see the project working [here](https://investflix.vercel.app/)
+You can see this project working [here](https://investflix.vercel.app/)
 
 ## Available Scripts
 
