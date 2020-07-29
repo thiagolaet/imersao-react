@@ -1,5 +1,5 @@
 import React from 'react';
-import { VideoCardContainer, VideoCardContainerWithName } from './styles';
+import { VideoCardContainer} from './styles';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL

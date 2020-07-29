@@ -5,8 +5,8 @@ import Home from './pages/Home';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import CadastroVideo from './pages/Cadastro/Video'
 import CadastroCategoria from './pages/Cadastro/Categoria'
+import CadastroVideo from './pages/Cadastro/Video'
 import PaginaErro from './pages/PaginaErro'
 
 ReactDOM.render(
