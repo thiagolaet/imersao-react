@@ -4,9 +4,10 @@
 }
 
 :root {
-  --primary: #FCF57A;
-  --black: #000000;
-  --blackLighter: #9E9E9E;
+  --primary: #EB5E28;
+  --secondary: #fcf57b;
+  --black: #252422;
+  --blackLighter: #141414;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
   --white: #FFFFFF;
