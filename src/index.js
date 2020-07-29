@@ -5,9 +5,9 @@ import Home from './pages/Home';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import CadastroCategoria from './pages/Cadastro/Categoria/index.js'
-import CadastroVideo from './pages/Cadastro/Video/index.js'
-import PaginaErro from './pages/PaginaErro/index.js'
+import CadastroCategoria from './pages/Cadastro/Categoria'
+import CadastroVideo from './pages/Cadastro/Video'
+import PaginaErro from './pages/PaginaErro'
 
 ReactDOM.render(
   <BrowserRouter>
