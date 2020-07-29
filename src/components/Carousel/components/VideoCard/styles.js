@@ -16,16 +16,43 @@ export const VideoCardContainer = styled.a`
   border-radius: 10px;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 16px;
 
-  transition: opacity .3s;
+  /* transition: opacity .3s;
   &:hover,
   &:focus {
-    opacity: .5;
-  }
+    opacity: 0.5;
+  } */
   
   &:not(:first-child) {
     margin-left: 20px;
   }
+
+  p {
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+    font-size: 18px;
+  }
+
+  &:hover p {
+    opacity: 1;
+  }
+
+  span {
+    transition: opacity 0.3s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &:hover span {
+    opacity: 1;
+  } 
+  
 `;
