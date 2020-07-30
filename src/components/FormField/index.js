@@ -6,9 +6,9 @@ function FormField({ label, type, name, value, onChange }) {
 
     let input;
     if (type === 'textarea') {
-        input = <textarea name={name} value={value.nome} onChange={onChange}/>;
+        input = <textarea name={name} value={value} onChange={onChange}/>;
     } else {
-        input = <input type={type} name={name} value={value.nome} onChange={onChange}/>;
+        input = <input type={type} name={name} value={value} onChange={onChange}/>;
     }
 
     return (

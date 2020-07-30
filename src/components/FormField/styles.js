@@ -23,6 +23,11 @@ export const InputField = styled.div`
         resize: none;
     }
 
+    input[type=color] {
+        height: 40px;
+        padding: 5px 20px;
+    }
+
     textarea {
         min-height: 100px;
     }
