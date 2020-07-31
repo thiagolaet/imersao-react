@@ -5,28 +5,19 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import { Form } from './styles';
 import './index.css';
+import useForm from '../../../hooks/useForm'
 
 function CadastroCategoria() {
   // useState() atribui um valor inicial ao state
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '#000',
   };
 
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(infosDoEvento) {
-    setValue(infosDoEvento.target.name, infosDoEvento.target.value);
-  }
 
   // Primeiro colocamos o efeito que queremos que ocorra e dentro do array específicamos quando queremos q ele ocorra, se deixarmos o array vazio ele irá ocorrer apenas 1 vez quando a página for carregada
 
@@ -49,20 +40,21 @@ function CadastroCategoria() {
     <Template>
       <h1>
         Cadastro de Categoria:
-        {values.nome}
+        {values.titulo}
       </h1>
 
       <Form onSubmit={function handleSubmit(event) {
         event.preventDefault();
 
         setCategorias([
-          ...categorias, values,
+          ...categorias, 
+          values,
         ]);
 
-        setValue(valoresIniciais);
+        clearForm();
       }}
       >
-        <FormField label="Nome da Categoria" type="text" name="nome" value={values.nome} onChange={handleChange} />
+        <FormField label="Título da Categoria" type="text" name="titulo" value={values.titulo} onChange={handleChange} />
 
         <FormField label="Descrição" type="textarea" name="descricao" value={values.descricao} onChange={handleChange} />
 
@@ -84,7 +76,7 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((categoria) => (
           <li key={categoria.id}>
-            {categoria.nome}
+            {categoria.titulo}
           </li>
         ))}
       </ul>
