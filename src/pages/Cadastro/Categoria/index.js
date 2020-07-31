@@ -34,7 +34,7 @@ function CadastroCategoria() {
     console.log('alou');
 
     setTimeout(() => {
-      const URL = window.location.hostname.includes('localhost') ? 'https://localhost:8080' : 'https://investflix.herokuapp.com/categorias'
+      const URL = window.location.hostname.includes('localhost') ? 'http://localhost:8080/categorias' : 'https://investflix.herokuapp.com/categorias';
       fetch(URL)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -83,7 +83,7 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={categoria}>
+          <li key={categoria.id}>
             {categoria.nome}
           </li>
         ))}
