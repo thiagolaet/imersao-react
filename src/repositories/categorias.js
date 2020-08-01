@@ -21,6 +21,24 @@ function create(objetoDaCategoria) {
   });
 }
 
+function deleteCategoria(id) {
+  return fetch(`${URL_CATEGORIES}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+    }
+    })
+  .then(async (respostaDoServidor) => {
+
+    if (respostaDoServidor.ok) {
+      const resposta = await respostaDoServidor.json();
+      return resposta;
+    }
+
+    throw new Error('Não foi possível deletar os dados');
+  });
+}
+
 function getAll() {  
   return fetch(URL_CATEGORIES)
   .then(async (respostaDoServidor) => {
@@ -50,5 +68,6 @@ function getAllWithVideos() {
 export default {
   getAllWithVideos,
   getAll,
-  create
+  create,
+  deleteCategoria
 }

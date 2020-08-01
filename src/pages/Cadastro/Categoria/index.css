@@ -3,3 +3,31 @@
     margin-top: 10px;
     margin-bottom: 25px;
 }
+
+.tabelaCategorias {
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tabelaCategorias, .tabelaCategorias th, .tabelaCategorias td {
+    text-align: left;
+    border: 3px solid var(--primary);
+    padding: 15px;
+    background-color: var(--black);
+}
+
+.tabelaCategorias button {
+    background-color: transparent;
+    text-decoration: none;
+    font-family: inherit;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;    
+}
+
+.tabelaCategorias th {
+    font-size: 20px;
+}

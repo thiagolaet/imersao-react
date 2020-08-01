@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Template from '../../../components/Template';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -9,8 +9,6 @@ import useForm from '../../../hooks/useForm'
 import categoriasRepository from '../../../repositories/categorias'
 
 function CadastroCategoria() {
-  const history = useHistory();
-
   // useState() atribui um valor inicial ao state
   const valoresIniciais = {
     titulo: '',
@@ -39,6 +37,15 @@ function CadastroCategoria() {
 
   }, []);
 
+  function deletarCategoria(id) {
+    document.getElementById(id).innerHTML = '';
+    return categoriasRepository.deleteCategoria(id);
+  }
+
+  function editarCategoria(id) {
+    console.log('categoria ' + id);
+  }
+
   return (
     <Template>
       <h1>
@@ -61,7 +68,6 @@ function CadastroCategoria() {
         })
           .then(() => {
             console.log('Cadastrou com sucesso!');
-            history.push('/');
           })
 
         clearForm();
@@ -86,13 +92,38 @@ function CadastroCategoria() {
         </div>
       )}
 
-      <ul>
-        {categorias.map((categoria) => (
-          <li key={categoria.id}>
-            {categoria.titulo}
-          </li>
-        ))}
-      </ul>
+      {categorias.length >= 1 && (
+
+        <table className="tabelaCategorias">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Cor</th>
+              <th>Editar</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            {categorias.map((categoria) => (
+              <tr id={categoria.id} key={categoria.id}>
+                <td>{categoria.titulo}</td>
+                <td>{categoria.descricao}</td>
+                <td>{categoria.cor}</td>
+                <td><button onClick={(id) => editarCategoria(categoria.id)} >Editar</button></td>
+                <td><button onClick={(id) =>  deletarCategoria(categoria.id)}>Remover</button></td>
+              </tr>
+            ))}
+
+          </tbody>
+
+        </table>
+
+      )}
+
+      
 
     </Template>
   );
