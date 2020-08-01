@@ -11,6 +11,12 @@
       "titulo": "Back End",
       "descricao": "Outra categoria",
       "cor": "#cbd1ff"
+    },
+    {
+      "titulo": "Flutter",
+      "descricao": "Uma playlist com os melhores vídeos sobre Flutter.",
+      "cor": "#287dc8",
+      "id": 3
     }
   ],
   "videos": [
@@ -51,64 +57,10 @@
       "id": 6
     },
     {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
+      "titulo": "Flutter: Tudo o que você precisa saber para começar",
+      "url": "https://www.youtube.com/watch?v=jbAh5R8CH_o",
+      "categoriaId": 3,
       "id": 7
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 8
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 9
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 10
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 11
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 12
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 13
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 1,
-      "id": 14
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 2,
-      "id": 15
-    },
-    {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
-      "categoriaId": 2,
-      "id": 16
     }
   ]
 }

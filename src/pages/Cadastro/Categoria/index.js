@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Template from '../../../components/Template';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import { Form } from './styles';
 import './index.css';
 import useForm from '../../../hooks/useForm'
+import categoriasRepository from '../../../repositories/categorias'
 
 function CadastroCategoria() {
+  const history = useHistory();
+
   // useState() atribui um valor inicial ao state
   const valoresIniciais = {
     titulo: '',
@@ -22,7 +25,6 @@ function CadastroCategoria() {
   // Primeiro colocamos o efeito que queremos que ocorra e dentro do array específicamos quando queremos q ele ocorra, se deixarmos o array vazio ele irá ocorrer apenas 1 vez quando a página for carregada
 
   useEffect(() => {
-    console.log('alou');
 
     setTimeout(() => {
       const URL = window.location.hostname.includes('localhost') ? 'http://localhost:8080/categorias' : 'https://investflix.herokuapp.com/categorias';
@@ -34,6 +36,7 @@ function CadastroCategoria() {
         ]);
       });
     });
+
   }, []);
 
   return (
@@ -51,6 +54,16 @@ function CadastroCategoria() {
           values,
         ]);
 
+        categoriasRepository.create({
+          titulo: values.titulo,
+          descricao: values.descricao,
+          cor: values.cor,
+        })
+          .then(() => {
+            console.log('Cadastrou com sucesso!');
+            history.push('/');
+          })
+
         clearForm();
       }}
       >
@@ -61,7 +74,7 @@ function CadastroCategoria() {
         <FormField label="Cor" type="color" name="cor" value={values.cor} onChange={handleChange} />
 
         <div>
-          <Button className="botaoCadastrar">Cadastrar</Button>
+          <Button type="submit" className="botaoCadastrar">Cadastrar</Button>
           <Link to="/">Ir para Home</Link>
         </div>
 
