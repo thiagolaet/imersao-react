@@ -1,3 +1,7 @@
+h1 {
+    margin-top: 0;
+}
+
 .botaoCadastrar {
     margin-right: 15px;
     margin-top: 10px;
@@ -13,9 +17,7 @@
 
 .tabelaCategorias, .tabelaCategorias th, .tabelaCategorias td {
     text-align: left;
-    border: 3px solid var(--primary);
     padding: 15px;
-    background-color: var(--black);
 }
 
 .tabelaCategorias button {
@@ -30,4 +32,18 @@
 
 .tabelaCategorias th {
     font-size: 20px;
+    background-color: #242424;
 }
+
+.tabelaCategorias td {
+    font-weight: 300;
+    border-bottom: 1px solid #242424;
+}
+
+.campoCor {
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    border-radius: 100%;
+}
+

@@ -5,8 +5,9 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import { Form } from './styles';
 import './index.css';
-import useForm from '../../../hooks/useForm'
-import categoriasRepository from '../../../repositories/categorias'
+import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
+import Loader from '../../../components/Loader';
 
 function CadastroCategoria() {
   // useState() atribui um valor inicial ao state
@@ -19,6 +20,9 @@ function CadastroCategoria() {
   const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
   const [categorias, setCategorias] = useState([]);
+
+  var lastId = categorias.length;
+  console.log("lastId" + lastId);
 
   // Primeiro colocamos o efeito que queremos que ocorra e dentro do array específicamos quando queremos q ele ocorra, se deixarmos o array vazio ele irá ocorrer apenas 1 vez quando a página for carregada
 
@@ -68,6 +72,11 @@ function CadastroCategoria() {
         })
           .then(() => {
             console.log('Cadastrou com sucesso!');
+
+
+            let lastTableRow = document.querySelectorAll("tr");
+            lastTableRow = lastTableRow[lastTableRow.length - 1];
+            lastTableRow.id = lastId + 1;
           })
 
         clearForm();
@@ -87,9 +96,7 @@ function CadastroCategoria() {
       </Form>
 
       {categorias.length === 0 && (
-        <div>
-          Loading...
-        </div>
+        <Loader></Loader>
       )}
 
       {categorias.length >= 1 && (
@@ -100,8 +107,8 @@ function CadastroCategoria() {
               <th>Nome</th>
               <th>Descrição</th>
               <th>Cor</th>
-              <th>Editar</th>
-              <th>Remover</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
 
@@ -111,9 +118,9 @@ function CadastroCategoria() {
               <tr id={categoria.id} key={categoria.id}>
                 <td>{categoria.titulo}</td>
                 <td>{categoria.descricao}</td>
-                <td>{categoria.cor}</td>
-                <td><button onClick={(id) => editarCategoria(categoria.id)} >Editar</button></td>
-                <td><button onClick={(id) =>  deletarCategoria(categoria.id)}>Remover</button></td>
+                <td><div className="campoCor" style={{background: categoria.cor}}></div></td>
+                <td><button className="botaoTabela" onClick={(id) => editarCategoria(categoria.id)} >Editar</button></td>
+                <td><button className="botaoTabela botaoRemover" onClick={(id) => deletarCategoria(categoria.id)}>Remover</button></td>
               </tr>
             ))}
 
@@ -122,9 +129,6 @@ function CadastroCategoria() {
         </table>
 
       )}
-
-      
-
     </Template>
   );
 }
