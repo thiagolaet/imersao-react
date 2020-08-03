@@ -1,3 +1,5 @@
+Projeto desenvolvido na semana da Imersão React na [Alura](https://www.alura.com.br/)
+
 You can see this project working [here](https://investflix.vercel.app/)
 
 ## Available Scripts
