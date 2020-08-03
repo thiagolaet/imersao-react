@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Template from '../../../components/Template';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -10,6 +10,7 @@ import categoriasRepository from '../../../repositories/categorias';
 import Loader from '../../../components/Loader';
 
 function CadastroCategoria() {
+  const history = useHistory();
   // useState() atribui um valor inicial ao state
   const valoresIniciais = {
     titulo: '',
@@ -20,9 +21,6 @@ function CadastroCategoria() {
   const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
   const [categorias, setCategorias] = useState([]);
-
-  var lastId = categorias.length;
-  console.log("lastId" + lastId);
 
   // Primeiro colocamos o efeito que queremos que ocorra e dentro do array específicamos quando queremos q ele ocorra, se deixarmos o array vazio ele irá ocorrer apenas 1 vez quando a página for carregada
 
@@ -55,6 +53,7 @@ function CadastroCategoria() {
 
       <Form onSubmit={function handleSubmit(event) {
         event.preventDefault();
+        history.push('/');
 
         setCategorias([
           ...categorias, 
@@ -68,11 +67,6 @@ function CadastroCategoria() {
         })
           .then(() => {
             console.log('Cadastrou com sucesso!');
-
-
-            let lastTableRow = document.querySelectorAll("tr");
-            lastTableRow = lastTableRow[lastTableRow.length - 1];
-            lastTableRow.id = lastId + 1;
           })
 
         clearForm();
