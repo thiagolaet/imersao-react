@@ -35,6 +35,11 @@ function CadastroVideo() {
       <form onSubmit={e => {
         e.preventDefault();
 
+        if (document.querySelector("input[name='titulo']").value.length < 1 || document.querySelector("input[name='url']").value.length < 1 || document.querySelector("input[name='categoria']").value.length < 1) {
+          alert.error('Não foi possível cadastrar o vídeo');
+          return;
+        }
+
         const categoriaEscolhida = categorias.find((categoria) => {
           return categoria.titulo === values.categoria;
         });

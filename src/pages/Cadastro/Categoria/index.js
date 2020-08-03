@@ -58,6 +58,11 @@ function CadastroCategoria() {
       <Form onSubmit={function handleSubmit(event) {
         event.preventDefault();
 
+        if (document.querySelector("input[name='titulo']").value.length < 1) {
+          alert.error('Insira um título');
+          return;
+        }
+
         setCategorias([
           ...categorias, 
           values,
