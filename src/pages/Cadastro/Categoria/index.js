@@ -101,31 +101,33 @@ function CadastroCategoria() {
 
       {categorias.length >= 1 && (
 
-        <table className="tabelaCategorias">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Descrição</th>
-              <th>Cor</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-            {categorias.map((categoria) => (
-              <tr id={categoria.id} key={categoria.id}>
-                <td>{categoria.titulo}</td>
-                <td>{categoria.descricao}</td>
-                <td><div className="campoCor" style={{background: categoria.cor}}></div></td>
-                <td><button className="botaoTabela botaoRemover" onClick={(id) => deletarCategoria(categoria.id)}>Remover</button></td>
+        <div className="tabelaCampo">
+          <table className="tabelaCategorias">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Cor</th>
+                <th></th>
+                <th></th>
               </tr>
-            ))}
+            </thead>
 
-          </tbody>
+            <tbody>
 
-        </table>
+              {categorias.map((categoria) => (
+                <tr id={categoria.id} key={categoria.id}>
+                  <td>{categoria.titulo}</td>
+                  <td>{categoria.descricao}</td>
+                  <td><div className="campoCor" style={{background: categoria.cor}}></div></td>
+                  <td><button className="botaoTabela botaoRemover" onClick={(id) => deletarCategoria(categoria.id)}>Remover</button></td>
+                </tr>
+              ))}
+
+            </tbody>
+
+          </table>
+        </div>
 
       )}
     </Template>
