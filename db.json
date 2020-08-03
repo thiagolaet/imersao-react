@@ -2,65 +2,155 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Front End",
-      "descricao": "Uma categoria bacanuda",
-      "cor": "#cbd1ff"
+      "titulo": "Educação Financeira",
+      "descricao": "Os vídeos que você precisa ver antes de começar a pensar em investir",
+      "cor": "#9cd33b"
+    },
+    {
+      "titulo": "Renda Variável",
+      "descricao": "Vídeos com o conteúdo essencial para você que quer investir em ações e fundos imobiliários",
+      "cor": "orange",
+      "id": 3
     },
     {
       "id": 2,
-      "titulo": "Back End",
-      "descricao": "Outra categoria",
-      "cor": "#cbd1ff"
+      "titulo": "Renda Fixa",
+      "descricao": "Tudo sobre Renda Fixa, a modalidade de investimento mais segura",
+      "cor": "#00C86F"
     },
     {
-      "titulo": "Flutter",
-      "descricao": "Uma playlist com os melhores vídeos sobre Flutter.",
-      "cor": "#287dc8",
-      "id": 3
+      "titulo": "Investindo fora do Brasil",
+      "descricao": "Dicas para você que quer investir fora do Brasil",
+      "cor": "red",
+      "id": 4
     }
   ],
   "videos": [
     {
-      "id": 1,
+      "titulo": "Orçamento inteligente",
+      "url": "https://www.youtube.com/watch?v=y016b7NXlpQ",
       "categoriaId": 1,
-      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+      "id": 2
     },
     {
-      "id": 2,
+      "titulo": "Controle FINANCEIRO em 6 PASSOS!",
+      "url": "https://www.youtube.com/watch?v=HNK5hriWVco",
       "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "id": 3
     },
     {
-      "id": 3,
+      "titulo": "RESERVA DE EMERGÊNCIA: como fazer a sua?",
+      "url": "https://www.youtube.com/watch?v=REBSBvYlrjA&t=104s",
       "categoriaId": 1,
-      "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+      "id": 5
     },
     {
-      "id": 4,
-      "categoriaId": 2,
-      "titulo": "Pare de chutar e aprenda a display: inline #01",
-      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+      "titulo": "Como montar uma CARTEIRA DE INVESTIMENTOS?",
+      "url": "https://www.youtube.com/watch?v=QtRNa9mG_2U",
+      "categoriaId": 1,
+      "id": 19
     },
     {
-      "id": 5,
-      "categoriaId": 2,
-      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+      "titulo": "5 Ideias para ganhar uma Renda Extra",
+      "url": "https://www.youtube.com/watch?v=GhOFj-e12I4&t=360s",
+      "categoriaId": 1,
+      "id": 4
     },
     {
-      "titulo": "Vídeo padrão",
-      "url": "https://www.youtube.com/watch?v=X5g2ydIxx04",
+      "titulo": "5 DICAS PARA COMPRAR MENOS",
+      "url": "https://www.youtube.com/watch?v=zj3KFFwi--Q",
+      "categoriaId": 1,
+      "id": 1
+    },
+    {
+      "titulo": "INFLAÇÃO",
+      "url": "https://www.youtube.com/watch?v=3An8pcxOa_o",
       "categoriaId": 1,
       "id": 6
     },
     {
-      "titulo": "Flutter: Tudo o que você precisa saber para começar",
-      "url": "https://www.youtube.com/watch?v=jbAh5R8CH_o",
-      "categoriaId": 3,
+      "titulo": "PRA VOCÊ ENTENDER TUDO DE JUROS",
+      "url": "https://www.youtube.com/watch?v=t0tZMCCKOYI",
+      "categoriaId": 1,
       "id": 7
+    },
+    {
+      "titulo": "TUDO SOBRE RENDA FIXA! LCI, LCA, CDB e LC",
+      "url": "https://www.youtube.com/watch?v=ysm9ZJ6O67w&t=1s",
+      "categoriaId": 2,
+      "id": 8
+    },
+    {
+      "titulo": "RESERVA DE EMERGÊNCIA: Onde Investir?",
+      "url": "https://www.youtube.com/watch?v=T4-Klg4E-Cw",
+      "categoriaId": 2,
+      "id": 9
+    },
+    {
+      "titulo": "COMO ESCOLHER UMA CORRETORA? Easynvest, Rico, XP ou Clear | QUAL É A MELHOR?",
+      "url": "https://www.youtube.com/watch?v=6ttVDSK2QAA",
+      "categoriaId": 3,
+      "id": 21
+    },
+    {
+      "titulo": "AÇÕES PARA INICIANTES",
+      "url": "https://www.youtube.com/watch?v=o9d3PTKURKs",
+      "categoriaId": 3,
+      "id": 10
+    },
+    {
+      "titulo": "O que são Fundos Imobiliários? | Vantagens e Riscos",
+      "url": "https://www.youtube.com/watch?v=-q2lF2bML_c",
+      "categoriaId": 3,
+      "id": 11
+    },
+    {
+      "titulo": "Como Analisar Uma Empresa | Como eu analiso as ações que invisto",
+      "url": "https://www.youtube.com/watch?v=KpwtM2QfBU0",
+      "categoriaId": 3,
+      "id": 12
+    },
+    {
+      "titulo": "Como Analisar um FII? Qual melhor indicador de fundos imobiliários para Estudar?",
+      "url": "https://www.youtube.com/watch?v=9edXnnNJXg0",
+      "categoriaId": 3,
+      "id": 13
+    },
+    {
+      "titulo": "Tudo que você precisa saber sobre Buy and Hold | Pit Money",
+      "url": "https://www.youtube.com/watch?v=wuOOFJvII5s",
+      "categoriaId": 3,
+      "id": 14
+    },
+    {
+      "titulo": "Tudo sobre DIVIDENDOS! - Bolsa de Valores",
+      "url": "https://www.youtube.com/watch?v=MA6vgA6qHrk",
+      "categoriaId": 3,
+      "id": 15
+    },
+    {
+      "titulo": "COMO INVESTIR NA BOLSA DOS EUA?",
+      "url": "https://www.youtube.com/watch?v=MjdB8fPJYJ8",
+      "categoriaId": 4,
+      "id": 16
+    },
+    {
+      "titulo": "Os 5 ERROS mais COMUNS no BUY AND HOLD",
+      "url": "https://www.youtube.com/watch?v=KgsjYw3k9qU",
+      "categoriaId": 3,
+      "id": 17
+    },
+    {
+      "titulo": "3 Passos para investir em AÇÕES no EXTERIOR com POUCO!",
+      "url": "https://www.youtube.com/watch?v=DkOo8f4VIbQ",
+      "categoriaId": 4,
+      "id": 18
+    },
+    {
+      "titulo": "O que é e como funciona o FGC? - Saiba tudo sobre o Fundo Garantidor de Crédito",
+      "url": "https://www.youtube.com/watch?v=t312MbChN2g",
+      "categoriaId": 3,
+      "id": 20
     }
   ]
 }

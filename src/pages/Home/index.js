@@ -29,7 +29,7 @@ function Home() {
               <BannerMain
                 videoTitle={dadosIniciais[0].videos[0].titulo}
                 url={dadosIniciais[0].videos[0].url}
-                videoDescription={dadosIniciais[0].videos[0].description}
+                videoDescription='Antes de começarmos a pensar em investir é necessário organizar nosso orçamento e começar a poupar dinheiro.'
               />
               <Carousel
                 ignoreFirstVideo

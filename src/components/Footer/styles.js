@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+export const FooterLink = styled.a` 
+  color: var(--primary);
+`;
 
 export const FooterBase = styled.footer`
   background: var(--black);

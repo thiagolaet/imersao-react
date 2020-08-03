@@ -46,10 +46,6 @@ function CadastroCategoria() {
     return categoriasRepository.deleteCategoria(id);
   }
 
-  function editarCategoria(id) {
-    console.log('categoria ' + id);
-  }
-
   return (
     <Template>
       <h1>
@@ -119,7 +115,6 @@ function CadastroCategoria() {
                 <td>{categoria.titulo}</td>
                 <td>{categoria.descricao}</td>
                 <td><div className="campoCor" style={{background: categoria.cor}}></div></td>
-                <td><button className="botaoTabela" onClick={(id) => editarCategoria(categoria.id)} >Editar</button></td>
                 <td><button className="botaoTabela botaoRemover" onClick={(id) => deletarCategoria(categoria.id)}>Remover</button></td>
               </tr>
             ))}
