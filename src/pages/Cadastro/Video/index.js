@@ -34,8 +34,6 @@ function CadastroVideo() {
 
       <form onSubmit={e => {
         e.preventDefault();
-        alert.success('Vídeo cadastrado com sucesso')
-        history.push('/');
 
         const categoriaEscolhida = categorias.find((categoria) => {
           return categoria.titulo === values.categoria;
@@ -50,8 +48,10 @@ function CadastroVideo() {
         })
           .then(() => {
             console.log('Cadastrou um sucesso!');
+            alert.success('Vídeo cadastrado com sucesso')
             history.push('/');
           })
+          .catch(() => alert.error('Não foi possível cadastrar o vídeo'));
       }}>
 
         <FormField 

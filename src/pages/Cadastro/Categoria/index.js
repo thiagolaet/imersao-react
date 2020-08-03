@@ -57,7 +57,6 @@ function CadastroCategoria() {
 
       <Form onSubmit={function handleSubmit(event) {
         event.preventDefault();
-        history.push('/');
 
         setCategorias([
           ...categorias, 
@@ -71,6 +70,7 @@ function CadastroCategoria() {
         })
           .then(() => {
             alert.success('Categoria cadastrada com sucesso');
+            history.push('/');
           })
           .catch((err) => alert.error('Não foi possível cadastrar a categoria'));
 
