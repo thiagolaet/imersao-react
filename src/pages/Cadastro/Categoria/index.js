@@ -8,6 +8,7 @@ import './index.css';
 import useForm from '../../../hooks/useForm';
 import categoriasRepository from '../../../repositories/categorias';
 import Loader from '../../../components/Loader';
+import { useAlert } from 'react-alert';
 
 function CadastroCategoria() {
   const history = useHistory();
@@ -17,6 +18,8 @@ function CadastroCategoria() {
     descricao: '',
     cor: '#000',
   };
+
+  const alert = useAlert()
 
   const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
@@ -41,6 +44,7 @@ function CadastroCategoria() {
 
   function deletarCategoria(id) {
     document.getElementById(id).innerHTML = '';
+    alert.success('Categoria deletada com sucesso')
     return categoriasRepository.deleteCategoria(id);
   }
 
@@ -66,8 +70,9 @@ function CadastroCategoria() {
           cor: values.cor,
         })
           .then(() => {
-            console.log('Cadastrou com sucesso!');
+            alert.success('Categoria cadastrada com sucesso');
           })
+          .catch((err) => alert.error('Não foi possível cadastrar a categoria'));
 
         clearForm();
       }}

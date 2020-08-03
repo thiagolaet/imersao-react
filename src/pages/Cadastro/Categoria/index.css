@@ -12,7 +12,12 @@ h1 {
     border-collapse: collapse;
     margin-bottom: 40px;
     margin-top: 20px;
-    width: 100%;
+}
+
+@media(min-width: 1195px) {
+    .tabelaCategorias {
+        width: 100%;
+    }
 }
 
 .tabelaCategorias, .tabelaCategorias th, .tabelaCategorias td {
@@ -46,4 +51,3 @@ h1 {
     margin-left: 6px;
     border-radius: 100%;
 }
-

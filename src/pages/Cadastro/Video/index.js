@@ -6,6 +6,7 @@ import useForm from '../../../hooks/useForm';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
+import { useAlert } from 'react-alert';
 
 function CadastroVideo() {
   const history = useHistory();
@@ -16,6 +17,8 @@ function CadastroVideo() {
     url: '',
     categoria: '',
   });
+
+  const alert = useAlert()
 
   useEffect(() => {
     categoriasRepository
@@ -31,6 +34,7 @@ function CadastroVideo() {
 
       <form onSubmit={e => {
         e.preventDefault();
+        alert.success('Vídeo cadastrado com sucesso')
         history.push('/');
 
         const categoriaEscolhida = categorias.find((categoria) => {
